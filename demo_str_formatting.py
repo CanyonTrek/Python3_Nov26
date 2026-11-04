@@ -38,7 +38,10 @@ for planet in planets.keys():
 
 
 
+can you please explain why is the answer for
+    c) print(int(items[1]) + int(items[3]))
 
+and not item[2] + item[4]?
 
 
 
