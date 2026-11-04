@@ -6,6 +6,8 @@
 """ 
     DocString
 """
+import sys
+
 movies = { 'ola': ['pulp fiction', 'shawshank redemption', 'mr harrigans phone'],
            'elaine': ['sound of music', 'the godfather', 'cinema parsdiso'],
            'irfan': ['the prestige', 'interstellar', 'the dark knight'],
@@ -17,8 +19,9 @@ fh_out = open(r"f:\labs\projects\Python3_Nov26\movies.txt", mode="wt")
 
 # ITERATE through the movies keys and write movie info to file
 for name in movies.keys():
-    print(f"{name} {movies[name]}", end="\n")
-    fh_out.write(f"{name} {movies[name]}\n")
+    print(f"{name} {movies[name]}", end="\n", file=sys.stdout)
+    print(f"{name} {movies[name]}", end="\n", file=fh_out)
+    # fh_out.write(f"{name} {movies[name]}\n")
 
 # fh_out.flush() # Manually flush buffers..
 fh_out.close() # Flush buffers and close file handle
