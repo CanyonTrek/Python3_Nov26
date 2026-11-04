@@ -8,15 +8,19 @@
 """
 import random
 
-lotto = []
+# lotto = []
+#while len(lotto) < 6:
+#    num = random.randint(1, 50)
+#    if not num in lotto:
+#        lotto.append(num)
+#    else:
+#        print("Duplicate number =", num)
+
+lotto = set() # Create EMPTY set
 
 while len(lotto) < 6:
     num = random.randint(1, 50)
-    if not num in lotto:
-        lotto.append(num)
-    else:
-        print("Duplicate number =", num)
+    lotto.add(num)
 
-
-print("Lottery numbers =", lotto)
+print("Lottery numbers =", sorted(lotto))
 print("Done")
